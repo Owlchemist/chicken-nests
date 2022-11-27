@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--============================== chickennest ==============================-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>sd_chickennest</defName>
+		<thingClass>Building_Bed</thingClass>
+		<label>chicken nest</label>
+		<description>A small nest for animals to sleep in. Fits smaller animals like chickens, cats, or small dogs. You can switch textures by rotating it.</description>
+		<size>(1,1)</size>
+		<passability>Standable</passability>
+		<designationCategory>Furniture</designationCategory>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>False</useHitPoints>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<rotatable>false</rotatable>
+		<graphicData>
+			<texPath>chicken_nest</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>0.75</uiIconScale>
+		<statBases>
+			<WorkToBuild>180</WorkToBuild>
+			<Mass>1</Mass>
+			<BedRestEffectiveness>0.93</BedRestEffectiveness>
+			<Comfort>0.60</Comfort>
+			<ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		<costList>
+			<Hay>25</Hay>
+		</costList>
+		<building>
+			<bed_humanlike>false</bed_humanlike>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<bed_maxBodySize>0.55</bed_maxBodySize>
+		</building>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Bed</compClass>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="AnimalBeds.AnimalBed">
+				<species>
+					<li>Chicken</li>
+				</species>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>
